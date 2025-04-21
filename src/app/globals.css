@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+body {
+  background: url('../assets/img/homepage.png') ;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.custom-gradient-btn {
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-top: 24px;
+  border: 1px solid;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+  border-image-source: linear-gradient(90deg, #FFFFFF 49.6%, #000000 100%);
+  border-image-slice: 1;
+}
+
+.flower{
+  top: 100%;
+  left: -15%;
+  transform: translateY(-50%);
+  opacity: 50%;
+}
+
+
+@media (max-width : 350px) {
+  .Name{
+    font-size: 40px;
+  }  
+  .UI{
+    display: none;
+  }
+}
