@@ -7,9 +7,11 @@ import Contact from "../assets/img/Contact.png";
 import { Skills } from "./Skills";
 import { LocationIcon, MailIcon, PhoneIcon } from "@/Component/Icon";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { AppContext } from "./Context";
+import Aos from "aos";
+import 'aos/dist/aos.css';
 export default function Home() {
   const {contactRef} = AppContext()
   const aboutRef = useRef(null);
@@ -23,6 +25,13 @@ export default function Home() {
     message: "",
     purpose: "",
   });
+  useEffect(() => {
+    Aos.init({
+      duration: 800, 
+      easing: 'ease-in-out', 
+      once: true, 
+    });
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -63,7 +72,7 @@ export default function Home() {
           className="absolute flower md:h-[460px] md:w-[460px] h-[250px] -z-1"
         />
         <div className="container mx-auto max-w-[1240px] px-3 flex md:flex-row flex-col md:mt-0 mt-8 h-custom items-center">
-          <div className="md:w-[60%] w-full ">
+          <div className="md:w-[60%] w-full " data-aos="fade-right">
             <h1 className="ff-Sansita text-black lg:text-4xl md:text-3xl sm:text-2xl ">
               Hello <span className="text-xl">( this is me )</span>
             </h1>
@@ -84,7 +93,7 @@ export default function Home() {
               About me
             </button>
           </div>
-          <div className="md:w-[40%] w-full h-full ">
+          <div className="md:w-[40%] w-full h-full" >
             <ThreeModel />
           </div>
         </div>
@@ -95,17 +104,17 @@ export default function Home() {
           <div className="container mx-auto max-w-[1240px] px-3 overflow-hidden">
             {/* intro  */}
             <div className="flex md:flex-row flex-col items-center gap-5">
-              <img src={Ring.src} alt="Img" />
+              <img src={Ring.src} alt="Img" data-aos="fade-right" />
               <div>
-                <h2 className="ff-Bree text-2xl">About Me</h2>
-                <h1 className="mt-3.5 ff-Sansita lg:text-7xl md:text-5xl text-5xl Name">
+                <h2 className="ff-Bree text-2xl" data-aos="fade-down">About Me</h2>
+                <h1 className="mt-3.5 ff-Sansita lg:text-7xl md:text-5xl text-5xl Name" data-aos="fade-up">
                   Mohit Khudia
                 </h1>
-                <div className="flex items-center gap-5 mt-4">
+                <div className="flex items-center gap-5 mt-4" data-aos="fade-right">
                   <div className="Dot-Arrow"></div>
-                  <h2 className="ff-Bree sm:text-2xl UI">UI / UX Developer</h2>
+                  <h2 className="ff-Bree sm:text-2xl UI" >UI / UX Developer</h2>
                 </div>
-                <p className="ff-Outfit sm:text-lg mt-7.5 text-[#5D5553] wrap-break-word">
+                <p className="ff-Outfit sm:text-lg mt-7.5 text-[#5D5553] wrap-break-word" data-aos="fade-up">
                   👋 Hi, I’m Mohit — a passionate frontend developer with a
                   strong eye for design and detail. I specialize in turning
                   creative ideas into clean, responsive, and user-friendly
@@ -120,7 +129,7 @@ export default function Home() {
 
             <div className="flex flex-col md:flex-row gap-5 mt-12.5">
               {/* Experience & Education */}
-              <div className="lg:w-1/2">
+              <div className="lg:w-1/2" data-aos="fade-right">
                 <div className="flex flex-col lg:flex-row gap-5">
                   {/* Experience  */}
                   <div className="lg:w-1/2">
@@ -168,13 +177,15 @@ export default function Home() {
                 </div>
               </div>
               {/* Skills  */}
-              <div className="md:w-1/2 mt-6 md:mt-0">
+              <div className="md:w-1/2 mt-6 md:mt-0" data-aos="fade-left">
                 <h2 className="ff-Bree text-2xl ">Technical Skills</h2>
                 <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 mt-5">
                   {Skills.map((value, index) => (
                     <div
                       className="border p-3 rounded-2xl hover:-translate-y-1 transition-all duration-200"
                       key={index}
+                      data-aos="flip-up"
+                      data-aos-delay = "700"
                     >
                       <div className="flex items-center  justify-between ">
                         <img
@@ -207,7 +218,7 @@ export default function Home() {
         <section ref={contactRef} className="mt-12.5">
           <div className="container mx-auto max-w-[1240px] px-3">
             <div className="flex md:flex-row flex-col gap-5">
-              <div className="md:w-1/2">
+              <div className="md:w-1/2" data-aos="fade-right">
                 <img src={Contact.src} alt="Img" />
                 <h2 className="ff-Sansita lg:text-7xl text-5xl mt-5">
                   Contact Me !
@@ -238,7 +249,7 @@ export default function Home() {
                   ahead.
                 </p>
               </div>
-              <div className="md:w-1/2 mt-5 md:mt-0">
+              <div className="md:w-1/2 mt-5 md:mt-0" data-aos="fade-left">
                 <div className="max-w-xl mx-auto p-12 rounded-[50px] backdrop-blur-md bg-white/20">
                   <form onSubmit={handleSubmit} className="flex flex-col gap-6">
                     <div>

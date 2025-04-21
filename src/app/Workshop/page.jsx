@@ -13,6 +13,7 @@ const Workshop = () => {
                 <div
                   className="border p-3 rounded-2xl hover:-translate-y-1 transition-all duration-200 backdrop-blur-md bg-white/20"
                   key={index}
+                  data-aos = "zoom-in"
                 >
                   <img src={value.img.src} alt="Project Img" />
                   <h2 className="text-xl lg:text-2xl ff-Bree mt-2.5">
