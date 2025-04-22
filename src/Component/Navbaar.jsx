@@ -42,7 +42,7 @@ export default function Navbaar() {
           <Link
             href="/Workshop"
             className={`text-lg ff-Nato font-semibold text-[#767472] hover:text-[#DF924A] ${
-              Path == "/Workshop" ? "text-[#DF924A]" : "text-[#767472]"
+              Path == "/Workshop" ? "text-[#DF924A] " : "text-[#767472]"
             }`}
             onClick={()=> setIsopen(false)}
           >
@@ -55,7 +55,7 @@ export default function Navbaar() {
               scrollToContact() 
               setIsopen(false)
             }}
-            className="py-2.5 px-5 rounded-[10px] bg-[#DF924A] text-lg ff-Nato text-white cursor-pointer"
+            className={`py-2.5 px-5 rounded-[10px]  text-lg ff-Nato text-white  ${Path != '/' ? 'bg-[#767472] cursor-not-allowed' : 'bg-[#DF924A] cursor-pointer'}`}
           >
             Contact Us
           </button>
