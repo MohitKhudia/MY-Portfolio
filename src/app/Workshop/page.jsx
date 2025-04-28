@@ -15,10 +15,11 @@ const Workshop = () => {
                   key={index}
                   data-aos = "zoom-in"
                 >
-                  <img src={value.img.src} alt="Project Img" />
+                  <img src={value.img.src} alt="Project Img" className="w-full h-1/2"/>
                   {value.size ? (<div className="bg-black px-2 py-1.5 text-sm absolute rounded-full -top-[15px] lg:-right-[30px] right-1/2 translate-x-1/2 lg:translate-x-0 ff-Bree text-white">
                       {value.size}
                   </div>) : ''}
+                  <div className="flex flex-col justify-between h-[50%]">
                   <h2 className="text-xl lg:text-2xl ff-Bree mt-2.5">
                     Title :- {value.title} 
                   </h2>
@@ -35,6 +36,7 @@ const Workshop = () => {
                       Click Here
                     </span>
                   </Link>
+                  </div>
                 </div>
               );
             })}
