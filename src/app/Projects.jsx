@@ -1,6 +1,6 @@
 import OwnPortfolio from "../assets/img/OwnPortfolio.png"
 import Dashboard from "../assets/img/Dashboardpng.png"
-import ComingSoon from '../assets/img/ComingSoon.jpg'
+import EStore from '../assets/img/E-store.png'
 export const Projects = [
         {
             img : OwnPortfolio ,
@@ -16,9 +16,9 @@ export const Projects = [
             size : 'desktop only'
         },
         {
-            img : ComingSoon ,
+            img : EStore ,
             title : "mini E-commerce site" ,
-            Description : "E-commerce web we use API for show product ! make in Next Js" ,
+            Description : "In this Project we Use API's , SSR and make it Like E-Commerce ! in Next Js" ,
             Link : "https://mini-e-store-g92m2cvf8-mohits-projects-5d223420.vercel.app/",
         }
 ]

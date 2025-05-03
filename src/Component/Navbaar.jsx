@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { GitHubIcon, LinkDinIcon } from "./Icon";
+import { CrossIcon, GitHubIcon, LinkDinIcon } from "./Icon";
 import { AppContext } from "@/app/Context";
 
 export default function Navbaar() {
@@ -10,13 +10,11 @@ export default function Navbaar() {
   const handleMenu = () => {
     setIsopen((prev) => {
       const newState = !prev;
-      console.log("New Isopen value:", newState);
       return newState;
     });
   };
   return (
     <nav className="max-w-[1240px] mt-7 mx-auto flex justify-between items-center py-5 px-7.5 rounded-[50px] bg-gradient-to-r from-white/30 to-white/30">
-      {/* Logo/Brand */}
       <div className="text-xl font-bold">
         <Link href="/" className="ff-Sansita text-[28px] font-normal">
           Portfolio
@@ -72,8 +70,11 @@ export default function Navbaar() {
             <GitHubIcon />
           </Link>
         </li>
+        <button className="font-bold md:hidden inline-block cursor-pointer absolute top-[3%] right-[5%] h-8 w-8" onClick={()=> setIsopen(!Isopen)}> 
+          <CrossIcon/>
+  </button>
       </ul>
-      <label className="hamburger md:hidden inline-block" onClick={handleMenu}>
+      <label className={`hamburger md:hidden inline-block `} onClick={handleMenu}>
         <input
           type="checkbox"
           onClick={(e) => {

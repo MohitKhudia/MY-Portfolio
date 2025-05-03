@@ -42,14 +42,15 @@
   stroke-dasharray: 12 63;
 }
 
-.hamburger input:checked + svg {
+/* .open input:checked + svg {
   transform: rotate(-45deg);
 }
 
-.hamburger input:checked + svg .line-top-bottom {
+.open input:checked + svg .line-top-bottom {
   stroke-dasharray: 20 300;
   stroke-dashoffset: -32.42;
-}
+} */
+
 .h-custom{
   height: calc(100vh - 110px);
 }
@@ -74,7 +75,7 @@
 
 @media (max-width: 767px) {
   ul {
-    height: calc(100vh - 120px);
+    height: 100vh;
     left: 0;
     flex-direction: column;
     justify-content: center;

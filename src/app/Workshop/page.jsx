@@ -11,11 +11,11 @@ const Workshop = () => {
             {Projects.map((value, index) => {
               return (
                 <div
-                  className="border p-3 relative rounded-2xl hover:-translate-y-1 transition-all duration-200 backdrop-blur-md bg-white/20"
+                  className="border flex flex-col h-full p-3 relative rounded-2xl hover:-translate-y-1 transition-all duration-200 backdrop-blur-md bg-white/20"
                   key={index}
                   data-aos = "zoom-in"
                 >
-                  <img src={value.img.src} alt="Project Img" className="w-full h-1/2"/>
+                  <img src={value.img.src} alt="Project Img" className="w-full"/>
                   {value.size ? (<div className="bg-black px-2 py-1.5 text-sm absolute rounded-full -top-[15px] lg:-right-[30px] right-1/2 translate-x-1/2 lg:translate-x-0 ff-Bree text-white">
                       {value.size}
                   </div>) : ''}
@@ -41,10 +41,6 @@ const Workshop = () => {
               );
             })}
           </div>
-          <h1 className="ff-Bree sm:text-2xl text-xl mt-5 text-center">
-            Now I am a fresher so I don't have any real world live projects but
-            i promise one day i will have a long list here 
-          </h1>
         </div>
       </section>
     </main>

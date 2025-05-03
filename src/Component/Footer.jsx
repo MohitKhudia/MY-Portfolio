@@ -6,7 +6,7 @@ const Footer = () => {
     const year = new Date().getFullYear();
     const path = usePathname()
   return (
-    <footer className={`mt-6 py-5 backdrop-blur-md bg-white/20 w-full ${path == '/Workshop' ? 'fixed bottom-0' : ''} `}>
+    <footer className={`mt-6 py-5 backdrop-blur-md bg-white/20 w-full ${path == '/Workshop' ? 'hidden' : ''}`}>
       <h2 className='ff-Bree text-center text-2xl'>@{year}</h2>
     </footer>
   )
