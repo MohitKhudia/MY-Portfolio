@@ -19,6 +19,6 @@ export const Projects = [
             img : EStore ,
             title : "mini E-commerce site" ,
             Description : "In this Project we Use API's , SSR and make it Like E-Commerce ! in Next Js" ,
-            Link : "https://mini-e-store-g92m2cvf8-mohits-projects-5d223420.vercel.app/",
+            Link : "https://mini-e-store.vercel.app/",
         }
 ]
